@@ -1,0 +1,23 @@
+<div id="container">
+  <dx-autocomplete
+    [dataSource]="dataSource"
+    valueExpr="Subject"
+    [grouped]="true"
+    label="Search for a task"
+    labelMode="floating"
+    [showClearButton]="true"
+    (onValueChanged)="onValueChanged($event)"
+    groupTemplate="group"
+    itemTemplate="item"
+    [wrapItemText]="true"
+    [searchTimeout]="300"
+    [maxLength]="20"
+  >
+    <div *dxTemplate="let data of 'group'">
+      {{ "Assigned to " + data.key }}
+    </div>
+    <div *dxTemplate="let item of 'item', let index=index">
+      {{ index + 1 + ". " + item.Subject }}
+    </div>
+  </dx-autocomplete>
+</div>
