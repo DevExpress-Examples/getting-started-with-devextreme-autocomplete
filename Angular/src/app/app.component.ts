@@ -1,20 +1,36 @@
 import { Component } from '@angular/core';
-import { ClickEvent } from 'devextreme/ui/button';
+import DataSource from 'devextreme/data/data_source';
+import ArrayStore from 'devextreme/data/array_store';
+import { DxAutocompleteTypes } from 'devextreme-angular/ui/autocomplete';
+import { Service, Task } from './app.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [Service],
 })
+
 export class AppComponent {
-  title = 'Angular';
+  title = '';
 
-  counter = 0;
+  employeesTasks: Task[];
 
-  buttonText = 'Click count: 0';
+  dataSource: DataSource<Task>;
 
-  onClick(e: ClickEvent): void {
-    this.counter++;
-    this.buttonText = `Click count: ${this.counter}`;
+  constructor(service: Service) {
+    this.employeesTasks = service.getTasks();
+    this.dataSource = new DataSource({
+      store: new ArrayStore({
+        data: this.employeesTasks,
+        key: 'ID',
+      }),
+      group: 'Assignee',
+    });
+  }
+
+  onValueChanged(e: DxAutocompleteTypes.ValueChangedEvent): void {
+    console.log(e.previousValue); // eslint-disable-line no-console
+    console.log(e.value); // eslint-disable-line no-console
   }
 }

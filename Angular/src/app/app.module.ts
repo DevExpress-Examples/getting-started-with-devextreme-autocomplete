@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DxButtonModule } from 'devextreme-angular/ui/button';
-import { AppRoutingModule } from './app-routing.module';
+
+import { DxAutocompleteModule } from 'devextreme-angular';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,8 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    DxButtonModule,
+    DxAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -18,9 +18,10 @@ This repository stores the code examples of the Autocomplete component for the [
 - **jQuery**
     - [index.js](jQuery/src/index.js)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **Vue**
-    - [App.vue](Vue/src/App.vue)
+    - [AutocompleteContent.vue](Vue/src/components/AutocompleteContent.vue)
+    - [AutocompleteView.vue](Vue/src/views/AutocompleteView.vue)
 
 ## Documentation
 
