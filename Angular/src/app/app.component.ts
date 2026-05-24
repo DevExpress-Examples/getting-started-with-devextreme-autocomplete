@@ -5,10 +5,11 @@ import { DxAutocompleteTypes } from 'devextreme-angular/ui/autocomplete';
 import { Service, Task } from './app.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [Service],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [Service],
+    standalone: false
 })
 
 export class AppComponent {
