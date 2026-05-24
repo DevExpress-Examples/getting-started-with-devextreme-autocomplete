@@ -4,12 +4,14 @@ import ArrayStore from 'devextreme/data/array_store';
 import { DxAutocompleteTypes } from 'devextreme-angular/ui/autocomplete';
 import { Service, Task } from './app.service';
 
+import { DxAutocompleteModule } from 'devextreme-angular';
+
 @Component({
     selector: 'app-root',
+    imports: [DxAutocompleteModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [Service],
-    standalone: false
 })
 
 export class AppComponent {
