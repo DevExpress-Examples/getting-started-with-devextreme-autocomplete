@@ -14,9 +14,7 @@ const dataSource = new DataSource<Task>({
 });
 
 function onValueChanged(e: ValueChangedEvent): void {
-  // eslint-disable-next-line no-console
   console.log('Previous value:', e.previousValue);
-  // eslint-disable-next-line no-console
   console.log('Current value:', e.value);
 }
 </script>

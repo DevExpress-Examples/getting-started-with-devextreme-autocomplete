@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   onValueChanged(e: DxAutocompleteTypes.ValueChangedEvent): void {
-    console.log(e.previousValue); // eslint-disable-line no-console
-    console.log(e.value); // eslint-disable-line no-console
+    console.log(e.previousValue);
+    console.log(e.value);
   }
 }
