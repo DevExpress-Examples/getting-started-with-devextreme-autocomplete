@@ -19,8 +19,8 @@ $(() => {
       return `Assigned to ${key}`;
     },
     onValueChanged(e) {
-      console.log(e.value); // eslint-disable-line no-console
-      console.log(e.previousValue); // eslint-disable-line no-console
+      console.log(e.value);
+      console.log(e.previousValue);
     },
     itemTemplate({ Subject }, index) {
       return `${index + 1}. ${Subject}`;

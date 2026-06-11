@@ -22,8 +22,8 @@ function App(): JSX.Element {
   });
 
   const onValueChanged = useCallback((e: AutocompleteTypes.ValueChangedEvent) => {
-    console.log(e.previousValue); // eslint-disable-line no-console
-    console.log(e.value); // eslint-disable-line no-console
+    console.log(e.previousValue);
+    console.log(e.value);
   }, []);
 
   const groupRender = useCallback((data: GroupRenderInfo) => (
