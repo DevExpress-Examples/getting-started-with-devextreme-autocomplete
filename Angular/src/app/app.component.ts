@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import DataSource from 'devextreme/data/data_source';
 import ArrayStore from 'devextreme/data/array_store';
 import { DxAutocompleteTypes } from 'devextreme-angular/ui/autocomplete';
@@ -11,6 +11,7 @@ import { DxAutocompleteModule } from 'devextreme-angular';
     imports: [DxAutocompleteModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [Service],
 })
 
